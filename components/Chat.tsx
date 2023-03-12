@@ -3,13 +3,14 @@ import { Button } from './Button'
 import { type ChatGPTMessage, ChatLine, LoadingChatLine } from './ChatLine'
 import { useCookies } from 'react-cookie'
 
-const COOKIE_NAME = 'nextjs-example-ai-chat-gpt3'
+const COOKIE_NAME = 'Ar2ri2-Chat'
 
 // default first message to display in UI (not necessary to define the prompt)
 export const initialMessages: ChatGPTMessage[] = [
   {
     role: 'assistant',
-    content: 'Hi! I am a friendly AI assistant. Ask me anything!',
+    content: 'hola! Soy R2RI2, tu asistente virtual. ¿Cómo te puedo ayudar?',
+  
   },
 ]
 
@@ -39,7 +40,7 @@ const InputMessage = ({ input, setInput, sendMessage }: any) => (
         setInput('')
       }}
     >
-      Say
+      Enviar
     </Button>
   </div>
 )
@@ -123,7 +124,7 @@ export function Chat() {
 
       {messages.length < 2 && (
         <span className="mx-auto flex flex-grow text-gray-600 clear-both">
-          Type a message to start the conversation
+          Escribe algo para empezar
         </span>
       )}
       <InputMessage
